@@ -1,10 +1,13 @@
-package com.example.travelpackingapp
+
+// Samuella Shako Kitwa
+// ST19462466package com.example.travelpackingapp
 
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.travelpackingapp.DetailedScreen
 import vcmsa.ci.my_music_app.R
 
 

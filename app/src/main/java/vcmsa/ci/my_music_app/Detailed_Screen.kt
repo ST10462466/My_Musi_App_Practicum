@@ -1,3 +1,5 @@
+// Samuella Shako Kitwa
+// ST19462466
 package com.example.travelpackingapp
 
 import android.content.Intent
