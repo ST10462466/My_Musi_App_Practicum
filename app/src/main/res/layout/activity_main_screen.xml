@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2575B4"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/songtitle"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:hint="Please enter the title of the song" />
+
+    <EditText
+        android:id="@+id/artistname"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:hint="Please enter the name of the artist" />
+
+    <EditText
+        android:id="@+id/ratingBox"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:hint="Rate your song!"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/commentsBox"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:hint="Please enter a comment" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#27A6B6"
+        android:text="Add a song!" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#27A6B6"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#27A6B6"
+        android:text="Exit" />
+</LinearLayout>
