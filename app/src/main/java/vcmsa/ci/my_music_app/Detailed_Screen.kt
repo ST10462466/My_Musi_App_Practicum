@@ -40,6 +40,16 @@ class DetailedScreen : AppCompatActivity() {
         textView.text = details
         Log.d("My_Music_App", "Displayed the playlist successfully!")
     }
+    // Function to calculate the average rating
+    private fun displayAverageRate(): Double {
+        if (MainScreen.ratings.isEmpty()) {
+            return 0.0  // Return 0 if no ratings exist
+        }
+
+        val totalRatings = MainScreen.ratings.sum() // Sum all ratings
+        val averageR = totalRatings.toDouble() / MainScreen.ratings.size // Divide the total ratings by the number of ratings
+        return averageR
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,11 +58,23 @@ class DetailedScreen : AppCompatActivity() {
         // Declaring and initialing variables
         val playlistBox: TextView = findViewById(R.id.playlistBox)
         val showMore: Button = findViewById(R.id.showButton)
+        val averageButton: Button = findViewById(R.id.averageButton)
         val backButton: Button = findViewById(R.id.backButton)
 
         // Calling the function "displaySongs" to allow the user to enter the details of a song
         showMore.setOnClickListener {
             displaySongs(playlistBox)
+        }
+        // averageButton clicked to calculate and display the average rating
+        averageButton.setOnClickListener {
+            val averageRating = displayAverageRate()
+            if (averageRating == 0.0) {
+                Toast.makeText(this, "No ratings available to calculate average.", Toast.LENGTH_SHORT).show()
+            } else {
+                // Display the average rating in a toast or textview
+                Toast.makeText(this, "Average Rating: $averageRating", Toast.LENGTH_SHORT).show()
+                Log.d("My_Music_App", "Average Rating: $averageRating")
+            }
         }
 
         // button clicked to go back to the main screen

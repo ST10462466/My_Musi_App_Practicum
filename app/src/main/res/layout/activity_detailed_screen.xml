@@ -25,6 +25,13 @@
         android:backgroundTint="#27A6B6"
         android:text="Show more!" />
 
+    <Button
+        android:id="@+id/averageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#27A6B6"
+        android:text="Average Rate!!" />
+
 
     <Button
         android:id="@+id/backButton"
